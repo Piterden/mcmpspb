@@ -1,0 +1,18 @@
+id: 3
+templatename: AJAX
+properties: 'a:0:{}'
+
+-----
+
+[[*id:is=`1`:then=`
+``[[$mainPage]]
+`:else=`
+    <div class="bc-wrap">
+        [[$breadcrumbs]]
+    </div>
+    <div class="title col-sm-9">
+        [[*pagetitle]]
+    </div>
+    <div class="clearfix"></div>
+`]]
+[[$outputManager]]

@@ -1,0 +1,58 @@
+id: 13
+source: 1
+name: nokogiri
+description: ''
+properties: 'a:0:{}'
+
+-----
+
+<h2>Форма обратной связи</h2>
+<form class="contact-form">
+    <div class="url">
+        <label for="url">URL</label>
+        <input type="text" name="url" data-validation="required">
+    </div><!--
+    <div class="email">
+        <label for="email">E-mail</label>
+        <input type="text" name="email" data-validation="email">
+    </div>
+    <div class="message">
+        <label for="message">Сообщение</label>
+        <textarea name="message" data-validation="required"></textarea>
+    </div>-->
+    <div class="submit">
+        <input type="submit" value="Отправить">
+    </div>
+</form>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+
+    $('.contact-form').on('submit', function() {
+        
+        var url = 'http://' + window.location.hostname + '/nokogiri.html';
+        var data = $('.contact-form').serialize();
+        console.log(data);
+        $.ajax({
+            url: url,
+            type: 'POST',
+            data: data
+        })
+        .done(function(data) {
+            console.log("success");
+            console.log(data);
+        })
+        .fail(function() {
+            console.log("error");
+        })
+        .always(function() {
+            console.log("complete");
+        });
+        
+        return false; // Will stop the submission of the form
+        
+    })
+    
+
+    
+});
+</script>

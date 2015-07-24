@@ -1,0 +1,20 @@
+id: 8
+source: 1
+name: sideMenuTopTpl
+description: ''
+category: Templates
+properties: 'a:0:{}'
+
+-----
+
+<div class="side-menu-block">
+    <h4>[[+pagetitle]]<i class="fa fa-angle-down"></i></h4>
+    [[!Wayfinder?
+        &startId=`[[+id]]`
+        &level=`2`
+        &outerClass=`side-menu`
+        &innerClass=`inner`
+        &parentClass=`inner-wrap`
+        &parentRowTpl=`sideMenu2LevTpl`
+    ]]
+</div>

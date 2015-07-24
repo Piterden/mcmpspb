@@ -1,0 +1,45 @@
+id: 9
+source: 1
+name: mainSlider
+description: ''
+category: Blocks
+properties: 'a:0:{}'
+
+-----
+
+<div class="slider-wrap">
+    <div id="slider" class="owl-carousel owl-theme">
+        [[Gallery? 
+            &album=`1`
+            &thumbTpl=`sliderTpl`
+            &itemCls=`item`
+        ]]
+    </div>
+</div>
+<div class="clearfix"></div>
+<script type="text/javascript">
+    
+    jQuery(document).ready(function($) {
+		
+		$("#slider").owlCarousel({
+ 
+			navigation : true, // Show next and prev buttons
+			navigationText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
+			slideSpeed : 300,
+			pagination: false,
+			singleItem: true,
+			autoPlay: true,
+
+			// "singleItem:true" is a shortcut for:
+			// items : 1, 
+			// itemsDesktop : false,
+			// itemsDesktopSmall : false,
+			// itemsTablet: false,
+			// itemsMobile : false
+			
+
+		});
+		
+	});
+    
+</script>

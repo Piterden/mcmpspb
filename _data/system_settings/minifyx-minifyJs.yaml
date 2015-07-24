@@ -1,0 +1,5 @@
+key: minifyx_minifyJs
+value: '1'
+xtype: combo-boolean
+namespace: minifyx
+area: minifyx_main

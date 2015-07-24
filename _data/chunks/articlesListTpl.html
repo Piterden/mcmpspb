@@ -1,0 +1,19 @@
+id: 22
+source: 1
+name: articlesListTpl
+description: ''
+category: Templates
+properties: 'a:0:{}'
+
+-----
+
+<div class="news-list-item">
+    <div class="title"><a href="[[~[[+id]]]]">[[+pagetitle]]</a></div>
+    <div class="postinfo">
+        <span itemprop="articleSection">
+        	<i class="fa fa-tags"></i>
+            <a href="[[~[[+parent]]]]">[[!getResourceField? &id=`[[+parent]]`]]</a>
+        </span>
+    </div>
+    <div class="text">[[+introtext:ifempty=`[[+content:striptags:limit=`300`]]...`]]</div>
+</div>

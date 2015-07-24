@@ -1,0 +1,31 @@
+id: 20
+source: 1
+name: articlesPage
+description: ''
+category: Pages
+properties: 'a:0:{}'
+
+-----
+
+<div class="col-sm-3 side-menu-block">
+    [[$blogCats]]
+</div>
+<div class="row articles">
+    <div class="col-sm-9">
+        <div class="list-box">
+            [[!getPage@standart_ru? 
+                &elementClass=`modSnippet` 
+                &element=`getResources` 
+                &parents=`[[*id]]` 
+                &depth=`3` 
+                &limit=`15` 
+                &pageVarKey=`page` 
+                &includeContent=`1` 
+                &tpl=`articlesListTpl`
+            ]]
+        </div>
+        <div class="paging"> 
+            <ul class="pagination">[[!+page.nav]]</ul> 
+        </div>
+    </div>
+</div>

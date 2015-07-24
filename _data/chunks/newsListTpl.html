@@ -1,0 +1,14 @@
+id: 19
+source: 1
+name: newsListTpl
+description: ''
+category: Templates
+properties: 'a:0:{}'
+
+-----
+
+<div class="news-list-item">
+    <div class="title"><a href="[[~[[+id]]]]">[[+pagetitle]]</a></div>
+    <div class="date"><i class="fa fa-calendar"></i>&nbsp;[[+publishedon:strtotime:date=`%e %b %Y`]]</div>
+    <div class="text">[[+content:striptags:limit=`300`]]...</div>
+</div>

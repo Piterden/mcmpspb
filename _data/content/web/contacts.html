@@ -1,0 +1,132 @@
+id: 160
+pagetitle: Контакты
+alias: contacts
+published: 1
+introtext: ''
+richtext: 0
+template: 2
+menuindex: 9
+createdon: 1436424606
+publishedon: 1436424600
+publishedby: 1
+uri: contacts/
+properties: null
+tvs:
+    doctor: ''
+
+-----
+
+<div class="row contacts-page">
+    <div class="col-sm-3 blocks-wrap">
+        <div class="address block">
+            <i class="fa fa-map-marker"></i>
+            <div class="text">
+                Адрес:<br>г. Санкт-Петербург,<br>пр.Пархоменко, д.29
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="phone block">
+            <i class="fa fa-phone"></i>
+            <div class="text">
+                Телефон: <br>
+                +7 (812) 297-11-11 <br>
+                +7 (812) 297-93-93
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="fax block">
+            <i class="fa fa-fax"></i>
+            <div class="text">
+                Факс: <br>
+                +7 (812) 297-93-93
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="email block">
+            <i class="fa fa-envelope"></i>
+            <div class="text">
+                E-mail: <a href="mailto:info@mcmpspb.ru" class="blue">info@mcmpspb.ru</a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="time block">
+            <i class="fa fa-clock-o"></i>
+            <div class="text">
+                Время работы: <br>
+                пн-пт 9:00—18:00
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="col-sm-9">
+        <div id="map" style="width: 100%; height: 400px;"></div>
+        <script type="text/javascript">
+        
+            var myMap;
+
+            // Дождёмся загрузки API и готовности DOM.
+            ymaps.ready(init);
+            
+            function init () {
+                // Создание экземпляра карты и его привязка к контейнеру с
+                // заданным id ("map").
+                myMap = new ymaps.Map('map', {
+                    // При инициализации карты обязательно нужно указать
+                    // её центр и коэффициент масштабирования.
+                    center:[59.99835076, 30.34748850],
+                    zoom:14
+                });
+            
+                /*document.getElementById('destroyButton').onclick = function () {
+                    // Для уничтожения используется метод destroy.
+                    myMap.destroy();
+                };*/
+                
+                // Кнопка изменения масштаба.
+                myMap.controls
+                .add('zoomControl', { left: 5, top: 5 })
+                .add('mapTools', { left: 35, top: 5 });
+                
+                mcmpClinic = new ymaps.Placemark([59.99835076, 30.34748850], {
+                    // Свойства.
+                    hintContent: 'Собственный значок метки'
+                }, {
+                    // Опции.
+                    // Своё изображение иконки метки.
+                    //iconImageHref: '[[++assets_url]]images/myIcon.gif',
+                    // Размеры метки.
+                    //iconImageSize: [30, 42],
+                    // Смещение левого верхнего угла иконки относительно
+                    // её "ножки" (точки привязки).
+                    //iconImageOffset: [-3, -42]
+                    preset: 'twirl#violetIcon'
+                });
+                
+                myMap.geoObjects.add(mcmpClinic);
+            
+            }
+            
+        </script>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="title">Форма обратной связи</div>
+        <form class="form-box">
+            <fieldset>
+                <div class="col-sm-4">
+                    <label for="name">Ваше имя</label>
+                    <input type="text" name="name">
+                    <label for="name">Телефон</label>
+                    <input type="text" name="phone">
+                    <label for="name">E-mail</label>
+                    <input type="text" name="email">
+                    <input class="btn btn-primary btn-sm" type="submit" value="Отправить">
+                </div>
+                <div class="col-sm-8">
+                    <textarea name="mess" cols="30" rows="10"></textarea>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

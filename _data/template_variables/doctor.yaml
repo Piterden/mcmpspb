@@ -1,0 +1,13 @@
+id: 1
+source: 1
+type: checkbox
+name: doctor
+caption: 'Рекомендуемый специалист'
+category: 'Поля статьи'
+elements: "Акушер-гинеколог==<a class=\"btn btn-primary\" href=\"[[~169]]\">Акушер-гинеколог</a>||\nАллерголог-иммунолог==<a class=\"btn btn-primary\" href=\"[[~170]]\">Аллерголог-иммунолог</a>||\nДерматолог==<a class=\"btn btn-primary\" href=\"[[~171]]\">Дерматолог</a>||\nКардиолог==<a class=\"btn btn-primary\" href=\"[[~172]]\">Кардиолог</a>||\nЛОР==<a class=\"btn btn-primary\" href=\"[[~173]]\">ЛОР</a>||\nНарколог==<a class=\"btn btn-primary\" href=\"[[~174]]\">Нарколог</a>||\nНевролог==<a class=\"btn btn-primary\" href=\"[[~175]]\">Невролог</a>||\nОкулист==<a class=\"btn btn-primary\" href=\"[[~176]]\">Окулист</a>||\nПедиатр==<a class=\"btn btn-primary\" href=\"[[~177]]\">Педиатр</a>||\nПсихиатр==<a class=\"btn btn-primary\" href=\"[[~178]]\">Психиатр</a>||\nТерапевт==<a class=\"btn btn-primary\" href=\"[[~179]]\">Терапевт</a>||\nУролог==<a class=\"btn btn-primary\" href=\"[[~180]]\">Уролог</a>||\nУЗИ на дому==<a class=\"btn btn-primary\" href=\"[[~181]]\">УЗИ на дому</a>"
+display: default
+default_text: ''
+properties: 'a:0:{}'
+input_properties: 'a:2:{s:10:"allowBlank";s:4:"true";s:7:"columns";s:1:"1";}'
+output_properties: 'a:0:{}'
+content: ''

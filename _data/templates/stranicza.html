@@ -1,0 +1,33 @@
+id: 2
+templatename: Страница
+properties: 'a:0:{}'
+
+-----
+
+[[$doctype]]
+<html>
+[[$head]]
+<body class="[[*alias]]">
+<div class="page-container">
+    [[$header]]
+    <div class="main container">
+        <div class="row">
+            <div class="col-sm-3">
+                [[$sideMenu]]
+            </div>
+            <div class="col-sm-9 content" id="ajax-container">
+                <div class="bc-wrap">
+                    [[$breadcrumbs]]
+                </div>
+                <div class="title col-sm-9">
+                    [[*pagetitle]]
+                </div>
+                <div class="clearfix"></div>
+                [[$outputManager]]
+            </div>
+        </div>
+    </div>
+    [[$footer]]
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+id: 1
+templatename: Главная
+properties: 'a:0:{}'
+
+-----
+
+[[$doctype]]
+<html>
+[[$head]]
+<body>
+<div class="page-container">
+    [[$header]]
+    <div class="main container">
+        <div class="row">
+            <div class="col-sm-3">
+                [[$sideMenu]]
+            </div>
+            <div class="col-sm-9 content" id="ajax-container">
+                [[$mainSlider]]
+                [[*content]]
+            </div>
+        </div>
+    </div>
+    [[$footer]]
+</div>
+</body>
+</html>
